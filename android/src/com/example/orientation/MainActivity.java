@@ -15,9 +15,8 @@ public class MainActivity extends QtActivity {
         myListener = new OrientationEventListener(this) {
             @Override
             public void onOrientationChanged(int i) {
-                int threshold = 15;
                 if(i >= 0) {
-                    if(i > threshold || i < threshold)
+                    if(i == 90 || i == 180 || i == 270 || i == 0)
                         sendOrientationJNI(i);
                 }
             }
