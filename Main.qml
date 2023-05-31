@@ -14,7 +14,7 @@ Window {
         width: window.width - 50
         height: window.width - 50
         anchors{centerIn: parent}
-        rotation: 360 - myclass.angle
+        rotation: -myclass.angle
         source: "qrc:/android/assets/cat.jpeg"
 
         Behavior on rotation {

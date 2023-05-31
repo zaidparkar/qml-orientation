@@ -18,7 +18,7 @@ signals:
     void angleChanged(int newAngle);
 
 private:
-    int rotation;
+    int rotation = 0;
 
 };
 
