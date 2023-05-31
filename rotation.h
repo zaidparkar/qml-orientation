@@ -6,13 +6,19 @@
 class Rotation : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(int angle READ angle WRITE setAngle NOTIFY angleChanged)
+
 public:
     explicit Rotation(QObject *parent = nullptr);
 
-    int angleToRotate(int angle);
+    int angle();
+    void setAngle(int newAngle);
 
 signals:
-    void angleChanged(int angle);
+    void angleChanged(int newAngle);
+
+private:
+    int rotation;
 
 };
 
